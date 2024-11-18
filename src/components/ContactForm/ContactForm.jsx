@@ -3,7 +3,8 @@ import * as Yup from "yup";
 import css from "./ContactForm.module.css";
 
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsOps";
+import { addContact } from "../../redux/contacts/operations";
+// import { addContact } from "../../redux/contacts/operations";
 
 const phoneNumberRegex =
   /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
@@ -11,7 +12,7 @@ const phoneNumberRegex =
 const AddProfileSchema = Yup.object({
   name: Yup.string()
     .min(3, "Name must be at least 2 characters")
-    .max(50, "Name must be less than 20 characters")
+    .max(20, "Name must be less than 20 characters")
     .required("Name is required"),
   number: Yup.string()
     .required("Phone is required")
