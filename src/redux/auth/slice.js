@@ -45,7 +45,9 @@ export const authSlice = createSlice({
       })
       .addCase(login.rejected, handleRejected)
       .addCase(logout.pending, handlePending)
-      .addCase(logout.fulfilled, () => INITIAL_STATE)
+      .addCase(logout.fulfilled, () => {
+        return INITIAL_STATE;
+      })
       .addCase(logout.rejected, handleRejected)
       .addCase(refreshUser.pending, (state) => {
         state.isRefreshing = true;
