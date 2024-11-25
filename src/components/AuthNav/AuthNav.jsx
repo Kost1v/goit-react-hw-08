@@ -9,14 +9,14 @@ const buildCssClasses = ({ isActive }) =>
 
 const AuthNav = () => {
   return (
-    <>
+    <div>
       <NavLink to="/login" className={buildCssClasses}>
         Log in
       </NavLink>
       <NavLink to="/register" className={buildCssClasses}>
         Register
       </NavLink>
-    </>
+    </div>
   );
 };
 

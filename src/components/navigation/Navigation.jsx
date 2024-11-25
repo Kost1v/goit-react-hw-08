@@ -4,7 +4,6 @@ import css from "./Navigation.module.css";
 import clsx from "clsx";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
 import { useSelector } from "react-redux";
-// import UserMenu from "../UserMenu/UserMenu";
 
 const buildCssClasses = ({ isActive }) =>
   clsx(css.link, isActive && css.active);

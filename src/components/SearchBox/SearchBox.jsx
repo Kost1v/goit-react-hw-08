@@ -10,9 +10,9 @@ const SearchBox = () => {
 
   return (
     <div>
-      <p>Find contacts</p>
+      <p style={{fontSize: 20}}>Find contacts</p>
       <input
-        className={css.searchInput}
+        className={css.inputFilter}
         type="text"
         value={filter}
         placeholder="Enter keyword to search"

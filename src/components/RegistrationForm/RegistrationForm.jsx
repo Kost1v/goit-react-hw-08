@@ -1,7 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
 
-import css from "../ContactForm/ContactForm.module.css";
+import css from "../RegistrationForm/RegistrationForm.module.css";
 
 import { RegisterSchema } from "../../utils/schema";
 import { register } from "../../redux/auth/operations";
@@ -38,7 +38,7 @@ const RegistrationForm = () => {
           <Field
             type="text"
             name="name"
-            className={css.input}
+            className={css.inputForm}
             placeholder="Enter your name..."
           />
           <ErrorMessage
@@ -52,7 +52,7 @@ const RegistrationForm = () => {
           <Field
             type="text"
             name="email"
-            className={css.input}
+            className={css.inputForm}
             placeholder="Enter email..."
           />
           <ErrorMessage
@@ -66,7 +66,7 @@ const RegistrationForm = () => {
           <Field
             type="password"
             name="password"
-            className={css.input}
+            className={css.inputForm}
             placeholder="Enter password..."
           />
           <ErrorMessage
@@ -75,7 +75,9 @@ const RegistrationForm = () => {
             component="span"
           />
         </label>
-        <button type="submit">Sing Up</button>
+        <button type="submit" className={css.btnForm}>
+          Sing Up
+        </button>
       </Form>
     </Formik>
   );

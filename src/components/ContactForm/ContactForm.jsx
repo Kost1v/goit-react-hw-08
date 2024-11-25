@@ -4,7 +4,6 @@ import css from "./ContactForm.module.css";
 
 import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/contacts/operations";
-// import { addContact } from "../../redux/contacts/operations";
 
 const phoneNumberRegex =
   /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
@@ -49,7 +48,7 @@ const ContactForm = () => {
             <Field
               type="text"
               name="name"
-              className={css.input}
+              className={css.inputForm}
               placeholder="Ivan Ivanov"
             />
             <ErrorMessage
@@ -61,7 +60,7 @@ const ContactForm = () => {
           <label className={css.label}>
             <span>Number:</span>
             <Field
-              className={css.input}
+              className={css.inputForm}
               type="text"
               name="number"
               placeholder="+38xxxxxxxxxx"
@@ -72,7 +71,9 @@ const ContactForm = () => {
               className={css.errorMessage}
             />
           </label>
-          <button type="submit">🤷‍♂️ Add Profile</button>
+          <button type="submit" className={css.btnForm}>
+            🤷‍♂️ Add Profile
+          </button>
         </Form>
       </Formik>
     </div>

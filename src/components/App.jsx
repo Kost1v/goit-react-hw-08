@@ -17,6 +17,8 @@ const RegistrationPage = lazy(() =>
 const LoginPage = lazy(() => import("../pages/login/LoginPage"));
 const ContactsPage = lazy(() => import("../pages/contacts/ContactsPage"));
 const NotFoundPage = lazy(() => import("../pages/NotFoundPage/NotFoundPage"));
+import css from "./App.module.css";
+
 
 const App = () => {
   const dispatch = useDispatch();
@@ -33,7 +35,7 @@ const App = () => {
   return (
     <div>
       <Layout>
-        <main>
+        <main className={css.links}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route
